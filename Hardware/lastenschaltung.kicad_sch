@@ -1197,7 +1197,7 @@
 	)
 	(text "targeted Noise Frequenzy 750kHz"
 		(exclude_from_sim no)
-		(at 122.936 27.94 0)
+		(at 119.634 28.448 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1207,13 +1207,23 @@
 	)
 	(text "5V / 1 A Power Supply\n"
 		(exclude_from_sim no)
-		(at 122.936 24.638 0)
+		(at 114.554 24.892 0)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
 		)
 		(uuid "cf4b7794-bd60-451f-9b51-abe21944300b")
+	)
+	(text "Frequenzy VR: 2.25MHz"
+		(exclude_from_sim no)
+		(at 114.554 32.004 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "df8addad-8332-4d1f-922a-5470293c43e9")
 	)
 	(text "Spannungsversorgung\n"
 		(exclude_from_sim no)
@@ -1225,7 +1235,7 @@
 		)
 		(uuid "fd4db0ce-3ce8-4f8a-b51c-8ea7a2103820")
 	)
-	(text_box "wichtig:\n- LC-Glied Ausgang\n- Auslegung Ferrit Bead\n- Kapazitoren (Glättung groß)"
+	(text_box "wichtig:\n- LC-Glied Ausgang\n- Auslegung Ferrit Bead\n- Kapazitoren (Glättung groß)\n- Widerstand der FB bei 1MHz"
 		(exclude_from_sim no)
 		(at 28.575 74.295 0)
 		(size 50.165 26.035)
@@ -1245,9 +1255,29 @@
 		)
 		(uuid "1bf09bef-b0b9-487a-b6b4-d0ccdfb28780")
 	)
+	(text_box "Ferrite Bead Auslegung:\n- 20% über Bias Current\n- DC-Bias bechten\n- I durch R 45K =260uA\n--> 20% Aufschlag +54uA (314uA)\n- FB Verstärkung nicht bei 2.25MHz"
+		(exclude_from_sim no)
+		(at 94.615 74.295 0)
+		(size 45.085 26.035)
+		(margins 0.9525 0.9525 0.9525 0.9525)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(fill
+			(type none)
+		)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left top)
+		)
+		(uuid "7e0b3410-6580-42c3-8c5a-0103d3f29718")
+	)
 	(text_box "Dämpfungsperle soll Störungen über 1 Mhz Filtern und das RC-Glied Frequenzen bis 750kHz"
 		(exclude_from_sim no)
-		(at 35.56 31.6882 0)
+		(at 38.735 31.6882 0)
 		(size 22.86 12.1268)
 		(margins 0.9525 0.9525 0.9525 0.9525)
 		(stroke
@@ -1745,6 +1775,12 @@
 					(unit 1)
 				)
 			)
+			(project "lastenschaltung"
+				(path "/6ce55f68-1125-4cc6-9aee-4afeea746562"
+					(reference "U?")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
@@ -1819,6 +1855,12 @@
 		(instances
 			(project "Prüfschaltung"
 				(path "/50eeda5a-bbbc-4ac4-9402-6cded37e420b"
+					(reference "#PWR019")
+					(unit 1)
+				)
+			)
+			(project "lastenschaltung"
+				(path "/6ce55f68-1125-4cc6-9aee-4afeea746562"
 					(reference "#PWR019")
 					(unit 1)
 				)
@@ -1902,6 +1944,12 @@
 					(unit 1)
 				)
 			)
+			(project "lastenschaltung"
+				(path "/6ce55f68-1125-4cc6-9aee-4afeea746562"
+					(reference "100k")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
@@ -1980,6 +2028,12 @@
 					(unit 1)
 				)
 			)
+			(project "lastenschaltung"
+				(path "/6ce55f68-1125-4cc6-9aee-4afeea746562"
+					(reference "#PWR020")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
@@ -2054,6 +2108,12 @@
 		(instances
 			(project "Prüfschaltung"
 				(path "/50eeda5a-bbbc-4ac4-9402-6cded37e420b"
+					(reference "#PWR02")
+					(unit 1)
+				)
+			)
+			(project "lastenschaltung"
+				(path "/6ce55f68-1125-4cc6-9aee-4afeea746562"
 					(reference "#PWR02")
 					(unit 1)
 				)
@@ -2139,6 +2199,12 @@
 					(unit 1)
 				)
 			)
+			(project "lastenschaltung"
+				(path "/6ce55f68-1125-4cc6-9aee-4afeea746562"
+					(reference "100uF")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
@@ -2214,6 +2280,12 @@
 		(instances
 			(project "Prüfschaltung"
 				(path "/50eeda5a-bbbc-4ac4-9402-6cded37e420b"
+					(reference "2L2uH")
+					(unit 1)
+				)
+			)
+			(project "lastenschaltung"
+				(path "/6ce55f68-1125-4cc6-9aee-4afeea746562"
 					(reference "2L2uH")
 					(unit 1)
 				)
@@ -2317,6 +2389,12 @@
 					(unit 1)
 				)
 			)
+			(project "lastenschaltung"
+				(path "/6ce55f68-1125-4cc6-9aee-4afeea746562"
+					(reference "VoltageRegulator?")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
@@ -2394,6 +2472,12 @@
 		(instances
 			(project "Prüfschaltung"
 				(path "/50eeda5a-bbbc-4ac4-9402-6cded37e420b"
+					(reference "4C7nF")
+					(unit 1)
+				)
+			)
+			(project "lastenschaltung"
+				(path "/6ce55f68-1125-4cc6-9aee-4afeea746562"
 					(reference "4C7nF")
 					(unit 1)
 				)
@@ -2479,6 +2563,12 @@
 					(unit 1)
 				)
 			)
+			(project "lastenschaltung"
+				(path "/6ce55f68-1125-4cc6-9aee-4afeea746562"
+					(reference "47nF")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
@@ -2553,6 +2643,12 @@
 		(instances
 			(project "Prüfschaltung"
 				(path "/50eeda5a-bbbc-4ac4-9402-6cded37e420b"
+					(reference "#PWR021")
+					(unit 1)
+				)
+			)
+			(project "lastenschaltung"
+				(path "/6ce55f68-1125-4cc6-9aee-4afeea746562"
 					(reference "#PWR021")
 					(unit 1)
 				)
@@ -2636,6 +2732,12 @@
 					(unit 1)
 				)
 			)
+			(project "lastenschaltung"
+				(path "/6ce55f68-1125-4cc6-9aee-4afeea746562"
+					(reference "45k")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
@@ -2710,6 +2812,12 @@
 		(instances
 			(project "Prüfschaltung"
 				(path "/50eeda5a-bbbc-4ac4-9402-6cded37e420b"
+					(reference "#PWR01")
+					(unit 1)
+				)
+			)
+			(project "lastenschaltung"
+				(path "/6ce55f68-1125-4cc6-9aee-4afeea746562"
 					(reference "#PWR01")
 					(unit 1)
 				)
@@ -2791,6 +2899,12 @@
 		(instances
 			(project "Prüfschaltung"
 				(path "/50eeda5a-bbbc-4ac4-9402-6cded37e420b"
+					(reference "100uF")
+					(unit 1)
+				)
+			)
+			(project "lastenschaltung"
+				(path "/6ce55f68-1125-4cc6-9aee-4afeea746562"
 					(reference "100uF")
 					(unit 1)
 				)
