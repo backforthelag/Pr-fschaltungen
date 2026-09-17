@@ -1235,7 +1235,7 @@
 		)
 		(uuid "fd4db0ce-3ce8-4f8a-b51c-8ea7a2103820")
 	)
-	(text_box "wichtig:\n- LC-Glied Ausgang\n- Auslegung Ferrit Bead\n- Kapazitoren (Glättung groß)\n- Widerstand der FB bei 1MHz"
+	(text_box "wichtig:\n- LC-Glied Ausgang\n- Auslegung Ferrit Bead\n- Kapazitoren (Glättung groß)\n- Widerstand der FB bei 1MHz\n- mögliches RC-Glied durch Dämpfungsperle"
 		(exclude_from_sim no)
 		(at 28.575 74.295 0)
 		(size 50.165 26.035)
